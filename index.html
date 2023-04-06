@@ -146,6 +146,7 @@
         let reset = document.querySelector("#reset-btn");
         reset.addEventListener("click", function () {
           clearInterval(timer);
+          pause.innerHTML = "Pause";
           countDownDate = new Date();
           countDownDate.setMinutes(countDownDate.getMinutes() + 20);
           countDownDate.setMilliseconds(countDownDate.getMilliseconds() + 200); // offset lag
