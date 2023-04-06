@@ -115,7 +115,7 @@
         const output = countDownDate.toLocaleTimeString();
         document.getElementById("endtime").innerHTML =
           '<span class="fa-solid fa-bell"></span>' +
-          output.split(" ")[0].slice(0, 5) +
+          output.split(" ")[0].split(":").slice(0, 2).join(":") +
           " " +
           output.split(" ")[1];
         // Update the countdown every second
@@ -133,7 +133,7 @@
             const output = new Date(countDownDate).toLocaleTimeString();
             document.getElementById("endtime").innerHTML =
               '<span class="fa-solid fa-bell"></span>' +
-              output.split(" ")[0].slice(0, 5) +
+              output.split(" ")[0].split(":").slice(0, 2).join(":") +
               " " +
               output.split(" ")[1];
             updateCountdown(countDownDate);
@@ -152,7 +152,7 @@
           const output = countDownDate.toLocaleTimeString();
           document.getElementById("endtime").innerHTML =
             '<span class="fa-solid fa-bell"></span>' +
-            output.split(" ")[0].slice(0, 5) +
+            output.split(" ")[0].split(":").slice(0, 2).join(":") +
             " " +
             output.split(" ")[1];
           updateCountdown(countDownDate);
